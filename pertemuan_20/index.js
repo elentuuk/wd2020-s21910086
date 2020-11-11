@@ -60,10 +60,35 @@ Rumus = berat (kg) / (tinggi * tinggi)
 Gunakan prompt untuk meminta input dari user
 */
 
-let berat = prompt("Masukkan Berat Badan Anda (kg) : ");
-console.log("berat badan yang anda masukkan adalah " + berat);
+//Assignment Menghitung BMI dan Kategori
+
+let berat = prompt("Masukkan Berat Badan Anda (kg) : ");    
+console.log( "Berat Anda adalah " + berat + " kg");
 let tinggi = prompt("Masukkan Tinggi Badan Anda (m) : ");
-console.log("tinggi badan yang anda masukkan adalah " + tinggi);
+console.log("Tinggi Anda adalah " + tinggi + " m");
 let hasil = berat / (tinggi * tinggi);
 console.log("BMI Anda = " + hasil);
-
+function bmiTable(){
+ if (hasil <= 18.5){
+     console.log ("Underweigth");
+ }
+ else if (hasil >= 18.5 && hasil <= 24.9){
+     console.log ("Normal Range");
+ }
+ else if (hasil >= 25.0 && hasil <=29.9){
+    console.log ("Overweigth/Preobese");
+ }
+ else if (hasil == 30.0){
+     console.log ("Obese");
+ }
+ else if (hasil >=30.0 && hasil <=34.9){
+     console.log ("Class I");
+ }
+ else if (hasil >=35.0 && hasil <= 39.9){
+     console.log ("Class II");
+ }
+ else if (hasil >=40.0){
+     console.log ("Class III");
+ }
+}
+bmiTable();
